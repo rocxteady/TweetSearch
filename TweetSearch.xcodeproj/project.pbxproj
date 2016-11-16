@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59FE1123B6854C29865F946B /* Pods_TweetSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9305A6D50F0A0DC1AC35CF /* Pods_TweetSearch.framework */; };
 		7C0D43311DDCB8B2007486E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43301DDCB8B2007486E9 /* main.m */; };
 		7C0D43341DDCB8B2007486E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43331DDCB8B2007486E9 /* AppDelegate.m */; };
 		7C0D43371DDCB8B2007486E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43361DDCB8B2007486E9 /* ViewController.m */; };
 		7C0D433A1DDCB8B2007486E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D43381DDCB8B2007486E9 /* Main.storyboard */; };
 		7C0D433C1DDCB8B2007486E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D433B1DDCB8B2007486E9 /* Assets.xcassets */; };
 		7C0D433F1DDCB8B2007486E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D433D1DDCB8B2007486E9 /* LaunchScreen.storyboard */; };
+		7C0D43481DDCBA9D007486E9 /* TSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43471DDCBA9D007486E9 /* TSConstants.m */; };
+		7C0D434B1DDCBB14007486E9 /* TSAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D434A1DDCBB14007486E9 /* TSAPIClient.m */; };
+		7C0D434D1DDCBCF1007486E9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D434C1DDCBCF1007486E9 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B9305A6D50F0A0DC1AC35CF /* Pods_TweetSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4925964939099CD1B92F8AEC /* Pods-TweetSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-TweetSearch/Pods-TweetSearch.release.xcconfig"; sourceTree = "<group>"; };
 		7C0D432C1DDCB8B2007486E9 /* TweetSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C0D43301DDCB8B2007486E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C0D43321DDCB8B2007486E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +32,12 @@
 		7C0D433B1DDCB8B2007486E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C0D433E1DDCB8B2007486E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C0D43401DDCB8B2007486E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C0D43461DDCBA9D007486E9 /* TSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSConstants.h; sourceTree = "<group>"; };
+		7C0D43471DDCBA9D007486E9 /* TSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSConstants.m; sourceTree = "<group>"; };
+		7C0D43491DDCBB14007486E9 /* TSAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAPIClient.h; sourceTree = "<group>"; };
+		7C0D434A1DDCBB14007486E9 /* TSAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAPIClient.m; sourceTree = "<group>"; };
+		7C0D434C1DDCBCF1007486E9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		9640F82753C6DE33C116F97A /* Pods-TweetSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetSearch/Pods-TweetSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FE1123B6854C29865F946B /* Pods_TweetSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +57,8 @@
 			children = (
 				7C0D432E1DDCB8B2007486E9 /* TweetSearch */,
 				7C0D432D1DDCB8B2007486E9 /* Products */,
+				9BF2322522EE650695397D01 /* Pods */,
+				966B00C208CBEE020B551C44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +75,10 @@
 			children = (
 				7C0D43321DDCB8B2007486E9 /* AppDelegate.h */,
 				7C0D43331DDCB8B2007486E9 /* AppDelegate.m */,
+				7C0D43491DDCBB14007486E9 /* TSAPIClient.h */,
+				7C0D434A1DDCBB14007486E9 /* TSAPIClient.m */,
+				7C0D43461DDCBA9D007486E9 /* TSConstants.h */,
+				7C0D43471DDCBA9D007486E9 /* TSConstants.m */,
 				7C0D43351DDCB8B2007486E9 /* ViewController.h */,
 				7C0D43361DDCB8B2007486E9 /* ViewController.m */,
 				7C0D43381DDCB8B2007486E9 /* Main.storyboard */,
@@ -74,9 +93,27 @@
 		7C0D432F1DDCB8B2007486E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C0D434C1DDCBCF1007486E9 /* Podfile */,
 				7C0D43301DDCB8B2007486E9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		966B00C208CBEE020B551C44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B9305A6D50F0A0DC1AC35CF /* Pods_TweetSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BF2322522EE650695397D01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9640F82753C6DE33C116F97A /* Pods-TweetSearch.debug.xcconfig */,
+				4925964939099CD1B92F8AEC /* Pods-TweetSearch.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C0D43431DDCB8B2007486E9 /* Build configuration list for PBXNativeTarget "TweetSearch" */;
 			buildPhases = (
+				C64474CBFFAC8FA0626A8D50 /* [CP] Check Pods Manifest.lock */,
 				7C0D43281DDCB8B2007486E9 /* Sources */,
 				7C0D43291DDCB8B2007486E9 /* Frameworks */,
 				7C0D432A1DDCB8B2007486E9 /* Resources */,
+				9B699D3BF0036A0DECA60124 /* [CP] Embed Pods Frameworks */,
+				0576682460793A8E2A6640EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,19 +180,70 @@
 			files = (
 				7C0D433F1DDCB8B2007486E9 /* LaunchScreen.storyboard in Resources */,
 				7C0D433C1DDCB8B2007486E9 /* Assets.xcassets in Resources */,
+				7C0D434D1DDCBCF1007486E9 /* Podfile in Resources */,
 				7C0D433A1DDCB8B2007486E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0576682460793A8E2A6640EE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TweetSearch/Pods-TweetSearch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B699D3BF0036A0DECA60124 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TweetSearch/Pods-TweetSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C64474CBFFAC8FA0626A8D50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C0D43281DDCB8B2007486E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C0D43481DDCBA9D007486E9 /* TSConstants.m in Sources */,
 				7C0D43371DDCB8B2007486E9 /* ViewController.m in Sources */,
 				7C0D43341DDCB8B2007486E9 /* AppDelegate.m in Sources */,
+				7C0D434B1DDCBB14007486E9 /* TSAPIClient.m in Sources */,
 				7C0D43311DDCB8B2007486E9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +362,7 @@
 		};
 		7C0D43441DDCB8B2007486E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9640F82753C6DE33C116F97A /* Pods-TweetSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5F92V2USM4;
@@ -283,6 +375,7 @@
 		};
 		7C0D43451DDCB8B2007486E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4925964939099CD1B92F8AEC /* Pods-TweetSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5F92V2USM4;
@@ -312,6 +405,7 @@
 				7C0D43451DDCB8B2007486E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
