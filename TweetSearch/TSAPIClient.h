@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^TSAPIClientBooleanBlock)(BOOL result, NSError *error);
+
 @interface TSAPIClient : NSObject
 
 + (TSAPIClient *)sharedClient;
+
+- (void)auth:(TSAPIClientBooleanBlock)block;
 
 @end

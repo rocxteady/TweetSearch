@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-static const NSString *TwitterConsumerKey = @"oFjXrLnZz9y3nLevHyhbjlka7";
-static const NSString *TwitterConsumerSecret = @"iCjY4jE2wAI7ysIdzeyp0hASn2SYJYklHjrKJfzpf6EbDdsdvm";
+static NSString *const TwitterConsumerKey = @"oFjXrLnZz9y3nLevHyhbjlka7";
+static NSString *const TwitterConsumerSecret = @"iCjY4jE2wAI7ysIdzeyp0hASn2SYJYklHjrKJfzpf6EbDdsdvm";
+
+static NSString *const KeychainTokenService = @"com.ulassancak.bearer-token";
 
 @interface TSConstants : NSObject
 
