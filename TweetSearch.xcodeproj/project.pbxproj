@@ -477,6 +477,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ulas Sancak (Q496T7GWHB)";
 				DEVELOPMENT_TEAM = 3U82SFTT2K;
 				INFOPLIST_FILE = TweetSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ulassancak.vtweetsearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,6 +494,7 @@
 				CODE_SIGN_ENTITLEMENTS = TweetSearch/TweetSearch.entitlements;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TweetSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ulassancak.vtweetsearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
