@@ -15,6 +15,8 @@ typedef void (^TSAPIClientSearchBlock)(TSSearchResult *result, NSError *error);
 
 @interface TSAPIClient : NSObject
 
+@property (nonatomic, readonly, getter=isAuthenticated) BOOL authenticated;
+
 + (TSAPIClient *)sharedClient;
 
 - (void)auth:(TSAPIClientBooleanBlock)block;

@@ -21,7 +21,7 @@
         [indexPaths addObject:indexPath];
     }
     [self.tweets removeAllObjects];
-    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
+    [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)addNewTweets:(NSArray *)tweets {
@@ -31,7 +31,7 @@
         [indexPaths addObject:indexPath];
     }
     [self.tweets addObjectsFromArray:tweets];
-    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationBottom];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
 }
 
 @end

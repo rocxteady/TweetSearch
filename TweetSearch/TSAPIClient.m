@@ -33,6 +33,13 @@ static NSString *const SearchURL = @"https://api.twitter.com/1.1/search/tweets.j
 
 #pragma mark - Public
 
+- (BOOL)isAuthenticated {
+    if (self.bearerToken) {
+        return YES;
+    }
+    return NO;
+}
+
 - (void)auth:(TSAPIClientBooleanBlock)block {
     [self getBearerToken:^(NSString *response, NSError *error) {
         if (error) {

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "TSAPIClient.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +19,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeGradient];
+    [self.window makeKeyAndVisible];
+    [self checkAuthentication];
     return YES;
 }
 
+- (void)checkAuthentication {
+    if (![TSAPIClient sharedClient].isAuthenticated) {
+        [SVProgressHUD showWithStatus:@"Authenticating..."];
+        [[TSAPIClient sharedClient] auth:^(BOOL result, NSError *error) {
+            [SVProgressHUD dismiss];
+            if (error) {
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+                [alertController addAction:[UIAlertAction actionWithTitle:@"Try Again" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [self checkAuthentication];
+                }]];
+            }
+        }];
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
