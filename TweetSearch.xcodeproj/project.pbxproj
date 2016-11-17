@@ -10,13 +10,15 @@
 		59FE1123B6854C29865F946B /* Pods_TweetSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9305A6D50F0A0DC1AC35CF /* Pods_TweetSearch.framework */; };
 		7C0D43311DDCB8B2007486E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43301DDCB8B2007486E9 /* main.m */; };
 		7C0D43341DDCB8B2007486E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43331DDCB8B2007486E9 /* AppDelegate.m */; };
-		7C0D43371DDCB8B2007486E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43361DDCB8B2007486E9 /* ViewController.m */; };
+		7C0D43371DDCB8B2007486E9 /* TweetSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43361DDCB8B2007486E9 /* TweetSearchViewController.m */; };
 		7C0D433A1DDCB8B2007486E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D43381DDCB8B2007486E9 /* Main.storyboard */; };
 		7C0D433C1DDCB8B2007486E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D433B1DDCB8B2007486E9 /* Assets.xcassets */; };
 		7C0D433F1DDCB8B2007486E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D433D1DDCB8B2007486E9 /* LaunchScreen.storyboard */; };
 		7C0D43481DDCBA9D007486E9 /* TSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43471DDCBA9D007486E9 /* TSConstants.m */; };
 		7C0D434B1DDCBB14007486E9 /* TSAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D434A1DDCBB14007486E9 /* TSAPIClient.m */; };
 		7C0D434D1DDCBCF1007486E9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D434C1DDCBCF1007486E9 /* Podfile */; };
+		7C82FE981DDD8A8300291B31 /* TSTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FE971DDD8A8300291B31 /* TSTextCell.m */; };
+		7C82FE9B1DDD8A9000291B31 /* TSMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FE9A1DDD8A9000291B31 /* TSMediaCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +28,8 @@
 		7C0D43301DDCB8B2007486E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C0D43321DDCB8B2007486E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7C0D43331DDCB8B2007486E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7C0D43351DDCB8B2007486E9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7C0D43361DDCB8B2007486E9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7C0D43351DDCB8B2007486E9 /* TweetSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweetSearchViewController.h; sourceTree = "<group>"; };
+		7C0D43361DDCB8B2007486E9 /* TweetSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetSearchViewController.m; sourceTree = "<group>"; };
 		7C0D43391DDCB8B2007486E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C0D433B1DDCB8B2007486E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C0D433E1DDCB8B2007486E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +40,10 @@
 		7C0D434A1DDCBB14007486E9 /* TSAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAPIClient.m; sourceTree = "<group>"; };
 		7C0D434C1DDCBCF1007486E9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		7C2B3E671DDCCC96004A205C /* TweetSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TweetSearch.entitlements; sourceTree = "<group>"; };
+		7C82FE961DDD8A8300291B31 /* TSTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTextCell.h; sourceTree = "<group>"; };
+		7C82FE971DDD8A8300291B31 /* TSTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTextCell.m; sourceTree = "<group>"; };
+		7C82FE991DDD8A9000291B31 /* TSMediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMediaCell.h; sourceTree = "<group>"; };
+		7C82FE9A1DDD8A9000291B31 /* TSMediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMediaCell.m; sourceTree = "<group>"; };
 		9640F82753C6DE33C116F97A /* Pods-TweetSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetSearch/Pods-TweetSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,8 +87,12 @@
 				7C0D434A1DDCBB14007486E9 /* TSAPIClient.m */,
 				7C0D43461DDCBA9D007486E9 /* TSConstants.h */,
 				7C0D43471DDCBA9D007486E9 /* TSConstants.m */,
-				7C0D43351DDCB8B2007486E9 /* ViewController.h */,
-				7C0D43361DDCB8B2007486E9 /* ViewController.m */,
+				7C0D43351DDCB8B2007486E9 /* TweetSearchViewController.h */,
+				7C0D43361DDCB8B2007486E9 /* TweetSearchViewController.m */,
+				7C82FE961DDD8A8300291B31 /* TSTextCell.h */,
+				7C82FE971DDD8A8300291B31 /* TSTextCell.m */,
+				7C82FE991DDD8A9000291B31 /* TSMediaCell.h */,
+				7C82FE9A1DDD8A9000291B31 /* TSMediaCell.m */,
 				7C0D43381DDCB8B2007486E9 /* Main.storyboard */,
 				7C0D433B1DDCB8B2007486E9 /* Assets.xcassets */,
 				7C0D433D1DDCB8B2007486E9 /* LaunchScreen.storyboard */,
@@ -248,10 +258,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C0D43481DDCBA9D007486E9 /* TSConstants.m in Sources */,
-				7C0D43371DDCB8B2007486E9 /* ViewController.m in Sources */,
+				7C82FE9B1DDD8A9000291B31 /* TSMediaCell.m in Sources */,
+				7C0D43371DDCB8B2007486E9 /* TweetSearchViewController.m in Sources */,
 				7C0D43341DDCB8B2007486E9 /* AppDelegate.m in Sources */,
 				7C0D434B1DDCBB14007486E9 /* TSAPIClient.m in Sources */,
 				7C0D43311DDCB8B2007486E9 /* main.m in Sources */,
+				7C82FE981DDD8A8300291B31 /* TSTextCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

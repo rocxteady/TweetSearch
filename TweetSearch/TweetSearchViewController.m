@@ -6,14 +6,16 @@
 //  Copyright © 2016 Ulaş Sancak. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TweetSearchViewController.h"
 #import "TSAPIClient.h"
 
-@interface ViewController ()
+@interface TweetSearchViewController ()
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
-@implementation ViewController
+@implementation TweetSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
