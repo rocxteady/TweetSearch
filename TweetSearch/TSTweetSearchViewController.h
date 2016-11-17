@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TweetSearchViewController : UITableViewController
+@interface TSTweetSearchViewController : UITableViewController
 
 @end
 

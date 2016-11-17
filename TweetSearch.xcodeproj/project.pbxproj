@@ -10,15 +10,23 @@
 		59FE1123B6854C29865F946B /* Pods_TweetSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9305A6D50F0A0DC1AC35CF /* Pods_TweetSearch.framework */; };
 		7C0D43311DDCB8B2007486E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43301DDCB8B2007486E9 /* main.m */; };
 		7C0D43341DDCB8B2007486E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43331DDCB8B2007486E9 /* AppDelegate.m */; };
-		7C0D43371DDCB8B2007486E9 /* TweetSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43361DDCB8B2007486E9 /* TweetSearchViewController.m */; };
+		7C0D43371DDCB8B2007486E9 /* TSTweetSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43361DDCB8B2007486E9 /* TSTweetSearchViewController.m */; };
 		7C0D433A1DDCB8B2007486E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D43381DDCB8B2007486E9 /* Main.storyboard */; };
 		7C0D433C1DDCB8B2007486E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D433B1DDCB8B2007486E9 /* Assets.xcassets */; };
 		7C0D433F1DDCB8B2007486E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D433D1DDCB8B2007486E9 /* LaunchScreen.storyboard */; };
 		7C0D43481DDCBA9D007486E9 /* TSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D43471DDCBA9D007486E9 /* TSConstants.m */; };
 		7C0D434B1DDCBB14007486E9 /* TSAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0D434A1DDCBB14007486E9 /* TSAPIClient.m */; };
 		7C0D434D1DDCBCF1007486E9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D434C1DDCBCF1007486E9 /* Podfile */; };
+		7C27D8321DDE2B420068C309 /* TSTweetSearchViewController+DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C27D8311DDE2B420068C309 /* TSTweetSearchViewController+DataHelper.m */; };
+		7C27D8381DDE2BB90068C309 /* TSTweetSearchViewController+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C27D8371DDE2BB90068C309 /* TSTweetSearchViewController+Private.m */; };
+		7C27D83B1DDE2D2E0068C309 /* TSSearchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C27D83A1DDE2D2E0068C309 /* TSSearchHelper.m */; };
 		7C82FE981DDD8A8300291B31 /* TSTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FE971DDD8A8300291B31 /* TSTextCell.m */; };
 		7C82FE9B1DDD8A9000291B31 /* TSMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FE9A1DDD8A9000291B31 /* TSMediaCell.m */; };
+		7C82FE9E1DDD9B9000291B31 /* TSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FE9D1DDD9B9000291B31 /* TSBaseModel.m */; };
+		7C82FEA61DDD9C4000291B31 /* TSTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FEA51DDD9C4000291B31 /* TSTweet.m */; };
+		7C82FEA91DDDBF1E00291B31 /* TSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FEA81DDDBF1E00291B31 /* TSUser.m */; };
+		7C82FEAC1DDDCA5600291B31 /* TSSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FEAB1DDDCA5600291B31 /* TSSearchResult.m */; };
+		7C82FEAF1DDDDEF100291B31 /* NSString+URLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FEAE1DDDDEF100291B31 /* NSString+URLQuery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +36,8 @@
 		7C0D43301DDCB8B2007486E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C0D43321DDCB8B2007486E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7C0D43331DDCB8B2007486E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7C0D43351DDCB8B2007486E9 /* TweetSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweetSearchViewController.h; sourceTree = "<group>"; };
-		7C0D43361DDCB8B2007486E9 /* TweetSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetSearchViewController.m; sourceTree = "<group>"; };
+		7C0D43351DDCB8B2007486E9 /* TSTweetSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSTweetSearchViewController.h; sourceTree = "<group>"; };
+		7C0D43361DDCB8B2007486E9 /* TSTweetSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSTweetSearchViewController.m; sourceTree = "<group>"; };
 		7C0D43391DDCB8B2007486E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C0D433B1DDCB8B2007486E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C0D433E1DDCB8B2007486E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,12 +46,28 @@
 		7C0D43471DDCBA9D007486E9 /* TSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSConstants.m; sourceTree = "<group>"; };
 		7C0D43491DDCBB14007486E9 /* TSAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAPIClient.h; sourceTree = "<group>"; };
 		7C0D434A1DDCBB14007486E9 /* TSAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAPIClient.m; sourceTree = "<group>"; };
-		7C0D434C1DDCBCF1007486E9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		7C0D434C1DDCBCF1007486E9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7C27D8301DDE2B420068C309 /* TSTweetSearchViewController+DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSTweetSearchViewController+DataHelper.h"; sourceTree = "<group>"; };
+		7C27D8311DDE2B420068C309 /* TSTweetSearchViewController+DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TSTweetSearchViewController+DataHelper.m"; sourceTree = "<group>"; };
+		7C27D8361DDE2BB90068C309 /* TSTweetSearchViewController+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSTweetSearchViewController+Private.h"; sourceTree = "<group>"; };
+		7C27D8371DDE2BB90068C309 /* TSTweetSearchViewController+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TSTweetSearchViewController+Private.m"; sourceTree = "<group>"; };
+		7C27D8391DDE2D2E0068C309 /* TSSearchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSearchHelper.h; sourceTree = "<group>"; };
+		7C27D83A1DDE2D2E0068C309 /* TSSearchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSearchHelper.m; sourceTree = "<group>"; };
 		7C2B3E671DDCCC96004A205C /* TweetSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TweetSearch.entitlements; sourceTree = "<group>"; };
 		7C82FE961DDD8A8300291B31 /* TSTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTextCell.h; sourceTree = "<group>"; };
 		7C82FE971DDD8A8300291B31 /* TSTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTextCell.m; sourceTree = "<group>"; };
 		7C82FE991DDD8A9000291B31 /* TSMediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMediaCell.h; sourceTree = "<group>"; };
 		7C82FE9A1DDD8A9000291B31 /* TSMediaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMediaCell.m; sourceTree = "<group>"; };
+		7C82FE9C1DDD9B9000291B31 /* TSBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBaseModel.h; sourceTree = "<group>"; };
+		7C82FE9D1DDD9B9000291B31 /* TSBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBaseModel.m; sourceTree = "<group>"; };
+		7C82FEA41DDD9C4000291B31 /* TSTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTweet.h; sourceTree = "<group>"; };
+		7C82FEA51DDD9C4000291B31 /* TSTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTweet.m; sourceTree = "<group>"; };
+		7C82FEA71DDDBF1E00291B31 /* TSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUser.h; sourceTree = "<group>"; };
+		7C82FEA81DDDBF1E00291B31 /* TSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUser.m; sourceTree = "<group>"; };
+		7C82FEAA1DDDCA5600291B31 /* TSSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSearchResult.h; sourceTree = "<group>"; };
+		7C82FEAB1DDDCA5600291B31 /* TSSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSearchResult.m; sourceTree = "<group>"; };
+		7C82FEAD1DDDDEF100291B31 /* NSString+URLQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLQuery.h"; sourceTree = "<group>"; };
+		7C82FEAE1DDDDEF100291B31 /* NSString+URLQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLQuery.m"; sourceTree = "<group>"; };
 		9640F82753C6DE33C116F97A /* Pods-TweetSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetSearch/Pods-TweetSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,18 +105,13 @@
 			isa = PBXGroup;
 			children = (
 				7C2B3E671DDCCC96004A205C /* TweetSearch.entitlements */,
+				7C82FEA11DDD9C1400291B31 /* API */,
+				7C82FEA21DDD9C1D00291B31 /* Utils */,
+				7C82FEA01DDD9C0900291B31 /* View Controllers */,
+				7C82FE9F1DDD9C0400291B31 /* Cells */,
+				7C82FEA31DDD9C2700291B31 /* Models */,
 				7C0D43321DDCB8B2007486E9 /* AppDelegate.h */,
 				7C0D43331DDCB8B2007486E9 /* AppDelegate.m */,
-				7C0D43491DDCBB14007486E9 /* TSAPIClient.h */,
-				7C0D434A1DDCBB14007486E9 /* TSAPIClient.m */,
-				7C0D43461DDCBA9D007486E9 /* TSConstants.h */,
-				7C0D43471DDCBA9D007486E9 /* TSConstants.m */,
-				7C0D43351DDCB8B2007486E9 /* TweetSearchViewController.h */,
-				7C0D43361DDCB8B2007486E9 /* TweetSearchViewController.m */,
-				7C82FE961DDD8A8300291B31 /* TSTextCell.h */,
-				7C82FE971DDD8A8300291B31 /* TSTextCell.m */,
-				7C82FE991DDD8A9000291B31 /* TSMediaCell.h */,
-				7C82FE9A1DDD8A9000291B31 /* TSMediaCell.m */,
 				7C0D43381DDCB8B2007486E9 /* Main.storyboard */,
 				7C0D433B1DDCB8B2007486E9 /* Assets.xcassets */,
 				7C0D433D1DDCB8B2007486E9 /* LaunchScreen.storyboard */,
@@ -109,6 +128,67 @@
 				7C0D43301DDCB8B2007486E9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7C82FE9F1DDD9C0400291B31 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7C82FE961DDD8A8300291B31 /* TSTextCell.h */,
+				7C82FE971DDD8A8300291B31 /* TSTextCell.m */,
+				7C82FE991DDD8A9000291B31 /* TSMediaCell.h */,
+				7C82FE9A1DDD8A9000291B31 /* TSMediaCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		7C82FEA01DDD9C0900291B31 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C0D43351DDCB8B2007486E9 /* TSTweetSearchViewController.h */,
+				7C0D43361DDCB8B2007486E9 /* TSTweetSearchViewController.m */,
+				7C27D8301DDE2B420068C309 /* TSTweetSearchViewController+DataHelper.h */,
+				7C27D8311DDE2B420068C309 /* TSTweetSearchViewController+DataHelper.m */,
+				7C27D8361DDE2BB90068C309 /* TSTweetSearchViewController+Private.h */,
+				7C27D8371DDE2BB90068C309 /* TSTweetSearchViewController+Private.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7C82FEA11DDD9C1400291B31 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7C0D43491DDCBB14007486E9 /* TSAPIClient.h */,
+				7C0D434A1DDCBB14007486E9 /* TSAPIClient.m */,
+				7C27D8391DDE2D2E0068C309 /* TSSearchHelper.h */,
+				7C27D83A1DDE2D2E0068C309 /* TSSearchHelper.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		7C82FEA21DDD9C1D00291B31 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7C0D43461DDCBA9D007486E9 /* TSConstants.h */,
+				7C0D43471DDCBA9D007486E9 /* TSConstants.m */,
+				7C82FEAD1DDDDEF100291B31 /* NSString+URLQuery.h */,
+				7C82FEAE1DDDDEF100291B31 /* NSString+URLQuery.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		7C82FEA31DDD9C2700291B31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7C82FE9C1DDD9B9000291B31 /* TSBaseModel.h */,
+				7C82FE9D1DDD9B9000291B31 /* TSBaseModel.m */,
+				7C82FEA41DDD9C4000291B31 /* TSTweet.h */,
+				7C82FEA51DDD9C4000291B31 /* TSTweet.m */,
+				7C82FEA71DDDBF1E00291B31 /* TSUser.h */,
+				7C82FEA81DDDBF1E00291B31 /* TSUser.m */,
+				7C82FEAA1DDDCA5600291B31 /* TSSearchResult.h */,
+				7C82FEAB1DDDCA5600291B31 /* TSSearchResult.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		966B00C208CBEE020B551C44 /* Frameworks */ = {
@@ -259,11 +339,19 @@
 			files = (
 				7C0D43481DDCBA9D007486E9 /* TSConstants.m in Sources */,
 				7C82FE9B1DDD8A9000291B31 /* TSMediaCell.m in Sources */,
-				7C0D43371DDCB8B2007486E9 /* TweetSearchViewController.m in Sources */,
+				7C82FEAF1DDDDEF100291B31 /* NSString+URLQuery.m in Sources */,
+				7C27D83B1DDE2D2E0068C309 /* TSSearchHelper.m in Sources */,
+				7C0D43371DDCB8B2007486E9 /* TSTweetSearchViewController.m in Sources */,
+				7C82FE9E1DDD9B9000291B31 /* TSBaseModel.m in Sources */,
+				7C82FEA61DDD9C4000291B31 /* TSTweet.m in Sources */,
 				7C0D43341DDCB8B2007486E9 /* AppDelegate.m in Sources */,
+				7C27D8381DDE2BB90068C309 /* TSTweetSearchViewController+Private.m in Sources */,
 				7C0D434B1DDCBB14007486E9 /* TSAPIClient.m in Sources */,
 				7C0D43311DDCB8B2007486E9 /* main.m in Sources */,
 				7C82FE981DDD8A8300291B31 /* TSTextCell.m in Sources */,
+				7C82FEA91DDDBF1E00291B31 /* TSUser.m in Sources */,
+				7C82FEAC1DDDCA5600291B31 /* TSSearchResult.m in Sources */,
+				7C27D8321DDE2B420068C309 /* TSTweetSearchViewController+DataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

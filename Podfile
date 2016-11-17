@@ -10,5 +10,6 @@ target 'TweetSearch' do
   pod 'Crashlytics'
   pod 'SDWebImage'
   pod 'SVProgressHUD'
+  pod 'DZNEmptyDataSet'
 
 end

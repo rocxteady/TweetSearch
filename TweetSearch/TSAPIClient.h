@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TSSearchResult.h"
 
 typedef void (^TSAPIClientBooleanBlock)(BOOL result, NSError *error);
+
+typedef void (^TSAPIClientSearchBlock)(TSSearchResult *result, NSError *error);
 
 @interface TSAPIClient : NSObject
 
 + (TSAPIClient *)sharedClient;
 
 - (void)auth:(TSAPIClientBooleanBlock)block;
+
+- (NSURLSessionDataTask *)searchWithQuery:(NSString *)searchQuery block:(TSAPIClientSearchBlock)block;
 
 @end

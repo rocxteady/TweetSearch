@@ -6,11 +6,10 @@
 //  Copyright © 2016 Ulaş Sancak. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TSTextCell.h"
 
-@interface TSMediaCell : UITableViewCell
+@interface TSMediaCell : TSTextCell
 
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *statusImageView;
 
 @end
