@@ -14,6 +14,9 @@
 #import "TSTweetSearchViewController+Private.h"
 #import "TSTweetSearchViewController+DataHelper.h"
 #import "TSSearchHelper.h"
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#import "TSConstants.h"
+#import "TSTweetDetailViewController.h"
 
 static NSString *textCellIdentifier = @"TSTextCell";
 static NSString *mediaCellIdentifier = @"TSMediaCell";
@@ -24,7 +27,7 @@ typedef NS_ENUM(NSUInteger, DataStatus) {
     DataStatusFinished
 };
 
-@interface TSTweetSearchViewController () <UISearchControllerDelegate, UISearchBarDelegate>
+@interface TSTweetSearchViewController () <UISearchControllerDelegate, UISearchBarDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 {
     NSString *searchQuery;
     NSTimer *searchTimer;
@@ -38,13 +41,41 @@ typedef NS_ENUM(NSUInteger, DataStatus) {
 
 @implementation TSTweetSearchViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (self.tweets.count > 0) {
+        [self.refreshControl beginRefreshing];
+        [self.tableView setContentOffset:CGPointMake(0, -self.refreshControl.frame.size.height) animated:YES];
+        [self resetData];
+        [self getTweets];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.definesPresentationContext = YES;
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshControlHandler) forControlEvents:UIControlEventValueChanged];
+    self.tableView.tableFooterView = [UIView new];
     searchHelper = [TSSearchHelper new];
     [self setupSearchBar];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tweets = [NSMutableArray array];
+}
+
+- (void)refreshControlHandler {
+    if (self.searchController.searchBar.text.length == 0 || searchHelper.isSearching) {
+        [self.refreshControl endRefreshing];
+        return;
+    }
+    [self resetData];
+    [self getTweets];
 }
 
 - (void)setupSearchBar {
@@ -70,6 +101,7 @@ typedef NS_ENUM(NSUInteger, DataStatus) {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [searchHelper searchWithQuery:searchQuery block:^(TSSearchResult *result, NSError *error) {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        [self.refreshControl endRefreshing];
         _dataStatus = DataStatusIdle;
         if (!error) {
             _lastSearchMetaData = result.searchMetadata;
@@ -153,11 +185,41 @@ typedef NS_ENUM(NSUInteger, DataStatus) {
     return 47.0;
 }
 
+#pragma mark - Empty Dataset Delegates
+
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView {
+    return (!searchHelper.isSearching && !self.refreshControl.isRefreshing);
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    return [[NSAttributedString alloc] initWithString:@"No Tweets"];
+}
+
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView {
+    return [[NSAttributedString alloc] initWithString:@"Please search something."];
+}
+
+- (BOOL)emptyDataSetShouldAllowTouch:(UIScrollView *)scrollView {
+    return NO;
+}
+
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView {
+    return YES;
+}
+
 #pragma mark - UIScrollView Delegates
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     if (_searchController.searchBar.isFirstResponder) {
         [_searchController.searchBar resignFirstResponder];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqual:TweetDetailSegue]) {
+        TSTweetDetailViewController *tweetDetailViewController = segue.destinationViewController;
+        TSTweet *tweet = self.tweets[self.tableView.indexPathForSelectedRow.row];
+        tweetDetailViewController.tweet = tweet;
     }
 }
 

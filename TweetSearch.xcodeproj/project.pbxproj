@@ -20,6 +20,7 @@
 		7C27D8321DDE2B420068C309 /* TSTweetSearchViewController+DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C27D8311DDE2B420068C309 /* TSTweetSearchViewController+DataHelper.m */; };
 		7C27D8381DDE2BB90068C309 /* TSTweetSearchViewController+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C27D8371DDE2BB90068C309 /* TSTweetSearchViewController+Private.m */; };
 		7C27D83B1DDE2D2E0068C309 /* TSSearchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C27D83A1DDE2D2E0068C309 /* TSSearchHelper.m */; };
+		7C7513C41DDF6289004CEEB5 /* TSTweetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7513C31DDF6289004CEEB5 /* TSTweetDetailViewController.m */; };
 		7C82FE981DDD8A8300291B31 /* TSTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FE971DDD8A8300291B31 /* TSTextCell.m */; };
 		7C82FE9B1DDD8A9000291B31 /* TSMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FE9A1DDD8A9000291B31 /* TSMediaCell.m */; };
 		7C82FE9E1DDD9B9000291B31 /* TSBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82FE9D1DDD9B9000291B31 /* TSBaseModel.m */; };
@@ -54,6 +55,8 @@
 		7C27D8391DDE2D2E0068C309 /* TSSearchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSearchHelper.h; sourceTree = "<group>"; };
 		7C27D83A1DDE2D2E0068C309 /* TSSearchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSearchHelper.m; sourceTree = "<group>"; };
 		7C2B3E671DDCCC96004A205C /* TweetSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TweetSearch.entitlements; sourceTree = "<group>"; };
+		7C7513C21DDF6289004CEEB5 /* TSTweetDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTweetDetailViewController.h; sourceTree = "<group>"; };
+		7C7513C31DDF6289004CEEB5 /* TSTweetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTweetDetailViewController.m; sourceTree = "<group>"; };
 		7C82FE961DDD8A8300291B31 /* TSTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTextCell.h; sourceTree = "<group>"; };
 		7C82FE971DDD8A8300291B31 /* TSTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTextCell.m; sourceTree = "<group>"; };
 		7C82FE991DDD8A9000291B31 /* TSMediaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMediaCell.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				7C27D8311DDE2B420068C309 /* TSTweetSearchViewController+DataHelper.m */,
 				7C27D8361DDE2BB90068C309 /* TSTweetSearchViewController+Private.h */,
 				7C27D8371DDE2BB90068C309 /* TSTweetSearchViewController+Private.m */,
+				7C7513C21DDF6289004CEEB5 /* TSTweetDetailViewController.h */,
+				7C7513C31DDF6289004CEEB5 /* TSTweetDetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C0D43481DDCBA9D007486E9 /* TSConstants.m in Sources */,
+				7C7513C41DDF6289004CEEB5 /* TSTweetDetailViewController.m in Sources */,
 				7C82FE9B1DDD8A9000291B31 /* TSMediaCell.m in Sources */,
 				7C82FEAF1DDDDEF100291B31 /* NSString+URLQuery.m in Sources */,
 				7C27D83B1DDE2D2E0068C309 /* TSSearchHelper.m in Sources */,
@@ -477,7 +483,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ulas Sancak (Q496T7GWHB)";
 				DEVELOPMENT_TEAM = 3U82SFTT2K;
 				INFOPLIST_FILE = TweetSearch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ulassancak.vtweetsearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -494,7 +500,7 @@
 				CODE_SIGN_ENTITLEMENTS = TweetSearch/TweetSearch.entitlements;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TweetSearch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ulassancak.vtweetsearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,6 +8,7 @@
 
 #import "TSTweetSearchViewController+DataHelper.h"
 #import "TSTweetSearchViewController+Private.h"
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 
 @implementation TSTweetSearchViewController (DataHelper)
 
@@ -22,6 +23,7 @@
     }
     [self.tweets removeAllObjects];
     [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView reloadEmptyDataSet];
 }
 
 - (void)addNewTweets:(NSArray *)tweets {

@@ -19,7 +19,7 @@
 
 @end
 
-@implementation TweetDetailViewController
+@implementation TSTweetDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -13,6 +13,8 @@ static NSString *const TwitterConsumerSecret = @"iCjY4jE2wAI7ysIdzeyp0hASn2SYJYk
 
 static NSString *const KeychainTokenService = @"com.ulassancak.bearer-token";
 
+static NSString *const TweetDetailSegue = @"Detail";
+
 @interface TSConstants : NSObject
 
 @end
