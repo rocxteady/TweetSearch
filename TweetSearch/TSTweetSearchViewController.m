@@ -18,9 +18,6 @@
 #import "TSConstants.h"
 #import "TSTweetDetailViewController.h"
 
-static NSString *textCellIdentifier = @"TSTextCell";
-static NSString *mediaCellIdentifier = @"TSMediaCell";
-
 typedef NS_ENUM(NSUInteger, DataStatus) {
     DataStatusIdle,
     DataStatusLoading,
@@ -33,6 +30,7 @@ typedef NS_ENUM(NSUInteger, DataStatus) {
     NSTimer *searchTimer;
     TSSearchHelper *searchHelper;
 }
+
 @property (strong, nonatomic) UISearchController *searchController;
 @property (strong, nonatomic) TSSearchMetedata *lastSearchMetaData;
 @property (assign, nonatomic) DataStatus dataStatus;
@@ -139,11 +137,21 @@ typedef NS_ENUM(NSUInteger, DataStatus) {
     [self resetData];
 }
 
-#pragma mark - UITableViewDelegates
+#pragma mark - UITableViewDelegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TSTweet *tweet = self.tweets[indexPath.row];
+    if (tweet.entities.media) {
+        return MediaCellHeight;
+    }
+    return textCellHeight;
+}
+
+#pragma mark - UITableViewDatasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.tweets.count;
@@ -177,26 +185,10 @@ typedef NS_ENUM(NSUInteger, DataStatus) {
     return genericCell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TSTweet *tweet = self.tweets[indexPath.row];
-    if (tweet.entities.media) {
-        return 201.0;
-    }
-    return 47.0;
-}
-
-#pragma mark - Empty Dataset Delegates
+#pragma mark - DZNEmptyDataSetDelegate
 
 - (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView {
     return (!searchHelper.isSearching && !self.refreshControl.isRefreshing);
-}
-
-- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
-    return [[NSAttributedString alloc] initWithString:@"No Tweets"];
-}
-
-- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView {
-    return [[NSAttributedString alloc] initWithString:@"Please search something."];
 }
 
 - (BOOL)emptyDataSetShouldAllowTouch:(UIScrollView *)scrollView {
@@ -207,6 +199,16 @@ typedef NS_ENUM(NSUInteger, DataStatus) {
     return YES;
 }
 
+#pragma mark - DZNEmptyDataSetDataSource
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    return [[NSAttributedString alloc] initWithString:@"No Tweets"];
+}
+
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView {
+    return [[NSAttributedString alloc] initWithString:@"Please search something."];
+}
+
 #pragma mark - UIScrollView Delegates
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -215,10 +217,13 @@ typedef NS_ENUM(NSUInteger, DataStatus) {
     }
 }
 
+#pragma mark - Navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqual:TweetDetailSegue]) {
+        UITableViewCell *selectedCell = (UITableViewCell *)sender;
         TSTweetDetailViewController *tweetDetailViewController = segue.destinationViewController;
-        TSTweet *tweet = self.tweets[self.tableView.indexPathForSelectedRow.row];
+        TSTweet *tweet = self.tweets[[self.tableView indexPathForCell:selectedCell].row];
         tweetDetailViewController.tweet = tweet;
     }
 }

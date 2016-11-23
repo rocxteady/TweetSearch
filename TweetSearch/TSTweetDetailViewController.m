@@ -24,6 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //Setting main scroll view's content inset manually beacuse of the 3D touch preview.
+    self.tweetScrollView.contentInset = UIEdgeInsetsMake(64.0, 0, 0, 0);
     [self loadData];
 }
 

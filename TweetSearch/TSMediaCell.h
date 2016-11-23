@@ -8,6 +8,9 @@
 
 #import "TSTextCell.h"
 
+static NSString *mediaCellIdentifier = @"TSMediaCell";
+static CGFloat const MediaCellHeight = 201.0;
+
 @interface TSMediaCell : TSTextCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *statusImageView;

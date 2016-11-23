@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8oL-Pb-p5D" id="j7f-qB-Z7h">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="47"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nr-pk-qBn">
@@ -82,9 +82,9 @@
                                     <outlet property="statusLabel" destination="Ors-Rh-8c3" id="gc3-Vz-yQT"/>
                                     <outlet property="userImageView" destination="S7V-y7-I3R" id="682-bZ-Iuu"/>
                                     <outlet property="usernameLabel" destination="2Nr-pk-qBn" id="5wW-nq-7P0"/>
-                                    <segue destination="4WM-p2-VUp" kind="show" identifier="Detail" id="b4X-QP-TPo">
-                                        <segue key="commit" inheritsFrom="parent" id="UW3-Md-MWI"/>
-                                        <segue key="preview" inheritsFrom="commit" id="2xb-ng-5gZ"/>
+                                    <segue destination="4WM-p2-VUp" kind="show" identifier="Detail" id="fIe-Pu-qcM">
+                                        <segue key="commit" inheritsFrom="parent" id="OEF-oD-mwa"/>
+                                        <segue key="preview" inheritsFrom="commit" id="QL1-hE-5ih"/>
                                     </segue>
                                 </connections>
                             </tableViewCell>
@@ -92,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="75" width="375" height="201"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mtH-Y4-one" id="DSK-ua-ZFI">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="201"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-0x-FJM">
@@ -143,6 +143,10 @@
                                     <outlet property="statusLabel" destination="kfb-Z9-Yxc" id="sdq-zH-RM7"/>
                                     <outlet property="userImageView" destination="HLZ-L7-kXx" id="E49-5X-Hgb"/>
                                     <outlet property="usernameLabel" destination="a1Q-0x-FJM" id="Lch-8B-tP7"/>
+                                    <segue destination="4WM-p2-VUp" kind="show" identifier="Detail" id="bHW-TY-yPY">
+                                        <segue key="commit" inheritsFrom="parent" id="43h-h1-zRm"/>
+                                        <segue key="preview" inheritsFrom="commit" id="NUE-rn-Xh2"/>
+                                    </segue>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -160,7 +164,7 @@
         <!--Tweet Detail-->
         <scene sceneID="PDb-AT-IVl">
             <objects>
-                <viewController id="4WM-p2-VUp" customClass="TSTweetDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TweetDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="4WM-p2-VUp" customClass="TSTweetDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I4Y-7H-Gdb"/>
                         <viewControllerLayoutGuide type="bottom" id="6WV-pB-6A8"/>
@@ -169,7 +173,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CsA-BP-cUp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CsA-BP-cUp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFB-1X-4qE">
@@ -229,8 +233,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CsA-BP-cUp" firstAttribute="top" secondItem="I4Y-7H-Gdb" secondAttribute="bottom" constant="-64" id="BQx-75-u7V"/>
                             <constraint firstAttribute="trailing" secondItem="CsA-BP-cUp" secondAttribute="trailing" id="T7B-JK-Q0v"/>
+                            <constraint firstItem="CsA-BP-cUp" firstAttribute="top" secondItem="I4Y-7H-Gdb" secondAttribute="bottom" constant="-64" id="jen-Zn-ZU1"/>
                             <constraint firstItem="6WV-pB-6A8" firstAttribute="top" secondItem="CsA-BP-cUp" secondAttribute="bottom" id="nyr-0Z-a9B"/>
                             <constraint firstItem="CsA-BP-cUp" firstAttribute="leading" secondItem="fQZ-Jo-QiA" secondAttribute="leading" id="yEK-zt-u2Z"/>
                         </constraints>
@@ -250,6 +254,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b4X-QP-TPo"/>
+        <segue reference="bHW-TY-yPY"/>
     </inferredMetricsTieBreakers>
 </document>

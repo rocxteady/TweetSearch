@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *textCellIdentifier = @"TSTextCell";
+static CGFloat const textCellHeight = 47.0;
+
 @interface TSTextCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
