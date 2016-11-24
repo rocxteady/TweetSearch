@@ -19,6 +19,28 @@
 @property (strong, nonatomic) NSString *text;
 @property (strong, nonatomic) TSUser *user;
 @property (strong, nonatomic) TSEntities *entities;
+@property (strong, nonatomic) NSString *createdAt;
+@property (strong, nonatomic, readonly) NSDate *createdAtDate;
+@property (strong, nonatomic, readonly) NSString *createdAtReadable;
+@property (assign, nonatomic) NSUInteger retweetCount;
+@property (assign, nonatomic) NSUInteger favoriteCount;
+
+@end
+
+@interface TSMediaSize : TSBaseModel
+
+@property (strong, nonatomic) NSString *resize;
+@property (assign, nonatomic) NSUInteger w;
+@property (assign, nonatomic) NSUInteger h;
+
+@end
+
+@interface TSMediaSizes : TSBaseModel
+
+@property (strong, nonatomic) TSMediaSize *medium;
+@property (strong, nonatomic) TSMediaSize *large;
+@property (strong, nonatomic) TSMediaSize *thumb;
+@property (strong, nonatomic) TSMediaSize *small;
 
 @end
 
@@ -28,7 +50,9 @@
 
 @property (strong, nonatomic) NSString *idStr;
 @property (strong, nonatomic) NSString *mediaUrlHttps;
-@property (strong, nonatomic) NSString *mediaThumbUrl;
+@property (strong, nonatomic, readonly) NSString *mediaThumbUrl;
+@property (strong, nonatomic, readonly) NSString *mediaLargeUrl;
+@property (strong, nonatomic) TSMediaSizes *sizes;
 
 @end
 

@@ -87,13 +87,12 @@ static NSString *const SearchURL = @"https://api.twitter.com/1.1/search/tweets.j
 
 //Getting bearer token for authorization from Twitter API
 - (void)getBearerToken:(TSAPIClientStringBlock)block {
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:_configuration];
     AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
     [requestSerializer setValue:[NSString stringWithFormat:@"Basic %@", _bearerTokenCredentials] forHTTPHeaderField:@"Authorization"];
-    manager.requestSerializer = requestSerializer;
+    _manager.requestSerializer = requestSerializer;
     AFHTTPResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.responseSerializer = responseSerializer;
-    [manager POST:OAUTHTokenURL parameters:@{@"grant_type": @"client_credentials"} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    _manager.responseSerializer = responseSerializer;
+    [_manager POST:OAUTHTokenURL parameters:@{@"grant_type": @"client_credentials"} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         block(responseObject[@"access_token"], nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         block(nil, error);
@@ -104,12 +103,11 @@ static NSString *const SearchURL = @"https://api.twitter.com/1.1/search/tweets.j
     if (_searchDataTask && _searchDataTask.state == NSURLSessionTaskStateRunning) {
         [_searchDataTask cancel];
     }
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:_configuration];
     AFHTTPRequestSerializer *requestSerializer = [self queryRequestSerializer];
-    manager.requestSerializer = requestSerializer;
+    _manager.requestSerializer = requestSerializer;
     AFHTTPResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.responseSerializer = responseSerializer;
-    _searchDataTask = [manager GET:SearchURL parameters:[query dictionaryQueryParams] progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    _manager.responseSerializer = responseSerializer;
+    _searchDataTask = [_manager GET:SearchURL parameters:[query dictionaryQueryParams] progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         block(responseObject, nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         block(nil, error);
